@@ -5,6 +5,19 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.WebApi", "DotNetCoreAngular.WebApi\DotNetCoreAngular.WebApi.csproj", "{D8F9A6D1-084B-471B-A412-784DC14FB69A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.Domain", "DotNetCoreAngular.Domain\DotNetCoreAngular.Domain.csproj", "{9F060778-C7BC-46CE-B51A-18B0EC308918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.Application", "DotNetCoreAngular.Application\DotNetCoreAngular.Application.csproj", "{98289258-4375-40DA-BC8B-97C1BBE9FBBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.Persistence", "DotNetCoreAngular.Persistence\DotNetCoreAngular.Persistence.csproj", "{DB5E70DD-1F36-4255-A939-0B1651B98B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.Infrastructure", "DotNetCoreAngular.Infrastructure\DotNetCoreAngular.Infrastructure.csproj", "{0354877C-BC42-49BD-9603-924CD0A8A54B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C301621C-0D1F-430B-9A14-68CCF0A54B0F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\davidm\Pictures\CleanArchitecture.png = ..\..\..\Users\davidm\Pictures\CleanArchitecture.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +28,22 @@ Global
 		{D8F9A6D1-084B-471B-A412-784DC14FB69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8F9A6D1-084B-471B-A412-784DC14FB69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8F9A6D1-084B-471B-A412-784DC14FB69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F060778-C7BC-46CE-B51A-18B0EC308918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F060778-C7BC-46CE-B51A-18B0EC308918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F060778-C7BC-46CE-B51A-18B0EC308918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F060778-C7BC-46CE-B51A-18B0EC308918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98289258-4375-40DA-BC8B-97C1BBE9FBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98289258-4375-40DA-BC8B-97C1BBE9FBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98289258-4375-40DA-BC8B-97C1BBE9FBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98289258-4375-40DA-BC8B-97C1BBE9FBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5E70DD-1F36-4255-A939-0B1651B98B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5E70DD-1F36-4255-A939-0B1651B98B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5E70DD-1F36-4255-A939-0B1651B98B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5E70DD-1F36-4255-A939-0B1651B98B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0354877C-BC42-49BD-9603-924CD0A8A54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0354877C-BC42-49BD-9603-924CD0A8A54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0354877C-BC42-49BD-9603-924CD0A8A54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0354877C-BC42-49BD-9603-924CD0A8A54B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
