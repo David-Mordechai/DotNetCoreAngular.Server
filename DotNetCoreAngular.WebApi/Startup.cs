@@ -20,7 +20,6 @@ namespace DotNetCoreAngular.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddSingleton(Configuration);
             services.AddPersistenceLibrary();
         }
 

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNetCoreAngular.Persistence.Migrations
 {
     [DbContext(typeof(DotNetCoreAngularDbContext))]
-    [Migration("20200410140202_Initial")]
+    [Migration("20200410140813_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

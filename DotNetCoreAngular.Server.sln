@@ -13,11 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.Persisten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreAngular.Infrastructure", "DotNetCoreAngular.Infrastructure\DotNetCoreAngular.Infrastructure.csproj", "{0354877C-BC42-49BD-9603-924CD0A8A54B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C301621C-0D1F-430B-9A14-68CCF0A54B0F}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Users\davidm\Pictures\CleanArchitecture.png = ..\..\..\Users\davidm\Pictures\CleanArchitecture.png
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
