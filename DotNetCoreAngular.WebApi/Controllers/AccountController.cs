@@ -48,11 +48,11 @@ namespace DotNetCoreAngular.WebApi.Controllers
         {
             var (token, refreshToken, isExpired) = await _accountService.Refresh(model);
 
-            if(string.IsNullOrEmpty(token))
-                return BadRequest();
-
-            if(isExpired)
+            if (isExpired)
                 return Unauthorized();
+
+            if (string.IsNullOrEmpty(token))
+                return BadRequest();
 
             return new ObjectResult(new
             {
