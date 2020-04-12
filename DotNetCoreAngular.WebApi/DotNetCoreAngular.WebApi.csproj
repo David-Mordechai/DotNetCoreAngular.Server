@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DotNetCoreAngular.Application\DotNetCoreAngular.Application.csproj" />
+    <ProjectReference Include="..\DotNetCoreAngular.Infrastructure\DotNetCoreAngular.Infrastructure.csproj" />
     <ProjectReference Include="..\DotNetCoreAngular.Persistence\DotNetCoreAngular.Persistence.csproj" />
   </ItemGroup>
 

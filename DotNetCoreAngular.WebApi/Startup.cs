@@ -1,3 +1,4 @@
+using DotNetCoreAngular.Infrastructure;
 using DotNetCoreAngular.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,7 @@ namespace DotNetCoreAngular.WebApi
         {
             services.AddControllers();
             services.AddPersistenceLibrary();
+            services.AddInfrastructureLibrary();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
