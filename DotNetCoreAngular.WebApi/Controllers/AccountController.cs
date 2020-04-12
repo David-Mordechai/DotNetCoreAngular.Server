@@ -43,6 +43,35 @@ namespace DotNetCoreAngular.WebApi.Controllers
             });
         }
 
+        [HttpPost, Route("Refresh")]
+        public async Task<IActionResult> Refresh(TokensModel model)
+        {
+            var (token, refreshToken, isExpired) = await _accountService.Refresh(model);
+
+            if(string.IsNullOrEmpty(token))
+                return BadRequest();
+
+            if(isExpired)
+                return Unauthorized();
+
+            return new ObjectResult(new
+            {
+                token,
+                refreshToken
+            });
+        }
+
+        [HttpPost, Authorize, Route("revoke")]
+        public async Task<IActionResult> Revoke()
+        {
+            var username = User.Identity.Name;
+            var user = await _accountService.Revoke(username);
+            
+            if (user == null) return BadRequest();
+
+            return NoContent();
+        }
+
         [HttpGet, Authorize, Route("getuserdetails")]
         public async Task<IActionResult> GetUserDetails()
         {

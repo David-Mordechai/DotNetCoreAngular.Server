@@ -22,7 +22,7 @@ namespace DotNetCoreAngular.Persistence.DataServices
         public int GetUserTheme(string userName)
         {
             var user = GetUser(userName);
-            return user != null ? user.UserExtensions.Theme : 0;
+            return (user == null || user.UserExtensions == null) ? 0 : user.UserExtensions.Theme;
         }
 
         public void SaveUserTheme(string userName, int themeType)

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using DotNetCoreAngular.Application.ViewModels;
+using System.Collections.Generic;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace DotNetCoreAngular.Application.Auth
 {

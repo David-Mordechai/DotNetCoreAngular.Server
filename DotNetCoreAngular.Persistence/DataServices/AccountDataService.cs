@@ -35,11 +35,16 @@ namespace DotNetCoreAngular.Persistence.DataServices
             return _dbContext.Users.SingleOrDefaultAsync(u => u.Username == username || u.Email == username);
         }
 
+        public async Task Revoke(User user)
+        {
+            user.RefreshToken = null;
+            await _dbContext.SaveChangesAsync();
+        }
+
         public async Task UpdateUserRefreshToken(User user, string refreshToken, DateTime refreshTokenExpDate)
         {
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpDate = refreshTokenExpDate;
-
             await _dbContext.SaveChangesAsync();
         }
     }

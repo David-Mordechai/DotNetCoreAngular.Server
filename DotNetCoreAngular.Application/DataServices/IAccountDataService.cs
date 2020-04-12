@@ -10,5 +10,6 @@ namespace DotNetCoreAngular.Application.DataServices
         Task<User> GetUserByUserNameOrEmail(string username);
         Task UpdateUserRefreshToken(User user, string refreshToken, DateTime refreshTokenExpDate);
         Task<User> GetUserByUserName(string username);
+        Task Revoke(User user);
     }
 }

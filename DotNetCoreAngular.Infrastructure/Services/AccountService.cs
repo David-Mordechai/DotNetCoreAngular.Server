@@ -64,5 +64,36 @@ namespace DotNetCoreAngular.Infrastructure.Services
             
             return (jwtToken, refreshToken);
         }
+
+        public async Task<(string token, string refershToken, bool isExpired)> Refresh(TokensModel model)
+        {
+            var principal = _tokenService.GetPrincipalFromExpiredToken(model.Token);
+            var username = principal.Identity.Name; //this is mapped to the Name claim by default
+
+            var user = await _accountDataService.GetUserByUserName(username);
+            if (user == null || user.RefreshToken != model.RefreshToken) return  (null, null, true);
+
+            var IsExpired = user.RefreshTokenExpDate < DateTime.Now;
+            if (IsExpired)
+                return (null, null, true);
+
+            var newJwtToken = _tokenService.GenerateAccessToken(principal.Claims);
+            var newRefreshToken = _tokenService.GenerateRefreshToken();
+
+            var refreshTokenExpDate = DateTime.Now.AddMinutes(
+              int.Parse(_configuration["Jwt:RefreshTokenDurationInMinutes"]));
+
+            await _accountDataService.UpdateUserRefreshToken(user, newRefreshToken, refreshTokenExpDate);
+
+            return (newJwtToken, newRefreshToken, false);
+        }
+
+        public async Task<User> Revoke(string username)
+        {
+            var user = await _accountDataService.GetUserByUserName(username);
+            if (user == null) return null;
+            await _accountDataService.Revoke(user);
+            return user;
+        }
     }
 }
