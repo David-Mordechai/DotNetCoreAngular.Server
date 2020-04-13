@@ -34,7 +34,7 @@ namespace DotNetCoreAngular.WebApi
                 options.AddPolicy("EnableCORS", builder =>
                 {
                     builder
-                      .WithOrigins("http://localhost:4200", "https://localhost:4200")
+                      .WithOrigins("http://localhost", "https://localhost", "http://localhost:4200", "https://localhost:4200")
                       //.AllowAnyOrigin()
                       .AllowAnyHeader()
                       .AllowAnyMethod()
