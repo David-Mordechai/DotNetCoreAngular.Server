@@ -7,6 +7,7 @@ namespace DotNetCoreAngular.Domain.Entities
         public int Id { get; set; }
         public int UserId { get; set; }
         public int Theme { get; set; }
+        public int DefaultGridPageSize { get; set; }
         public ICollection<User> Users { get; set; } = new HashSet<User>();
     }
 }
