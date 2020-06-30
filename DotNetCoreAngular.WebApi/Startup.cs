@@ -50,12 +50,6 @@ namespace DotNetCoreAngular.WebApi
                 options.SuppressXFrameOptionsHeader = true;
             });
 
-            services.AddHsts(options =>
-            {
-                options.IncludeSubDomains = true;
-                options.MaxAge = TimeSpan.FromDays(365);
-            });
-
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
               .AddJwtBearer(options =>
               {
@@ -93,15 +87,6 @@ namespace DotNetCoreAngular.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Use(async (context, next) =>
-            {
-                context.Response.Headers.Add("X-Xss-Protection", "1");
-                context.Response.Headers.Add("Referrer-Policy", "no-referrer");
-                context.Response.Headers.Add("X-Permitted-Cross-Domain-Policies", "none");
-                
-                await next();
-            });
 
             app.UseCors("EnableCORS");
 
