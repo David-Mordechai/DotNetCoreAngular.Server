@@ -20,9 +20,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: |
-        Copy-Item DotNetCoreAngular.WebApi\bin\Debug\netcoreapp3.1* "Default Web Site/DotNetCoreAngular.WebApi" -Recurse -Force
+      run: dotnet publish --configuration Release
