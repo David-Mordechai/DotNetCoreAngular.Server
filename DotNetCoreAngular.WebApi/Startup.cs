@@ -1,3 +1,4 @@
+using DotNetCoreAngular.Application;
 using DotNetCoreAngular.Infrastructure;
 using DotNetCoreAngular.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -28,6 +29,7 @@ namespace DotNetCoreAngular.WebApi
             services.AddControllers();
             services.AddPersistenceLibrary();
             services.AddInfrastructureLibrary();
+            services.AddApplicationLibrary();
 
             services.AddCors(options =>
             {

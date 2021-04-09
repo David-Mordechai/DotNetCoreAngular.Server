@@ -1,8 +1,7 @@
 ﻿using DotNetCoreAngular.Application.DataServices;
-using DotNetCoreAngular.Application.Validators;
 using DotNetCoreAngular.Application.ViewModels;
 
-namespace DotNetCoreAngular.Infrastructure.Validators
+namespace DotNetCoreAngular.Application.Validators
 {
     public class RegisterValidator : IRegisterValidator
     {

@@ -9,10 +9,8 @@ namespace DotNetCoreAngular.Persistence
     {
         private readonly IConfiguration _configuration;
 
-        public DotNetCoreAngularDbContext(IConfiguration configuration)
-        {
+        public DotNetCoreAngularDbContext(IConfiguration configuration) => 
             _configuration = configuration;
-        }
 
         public DbSet<User> Users { get; set; }
         public DbSet<UserExtensions> UserExtensions { get; set; }
@@ -23,9 +21,7 @@ namespace DotNetCoreAngular.Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => 
             optionsBuilder.UseSqlite(_configuration.GetConnectionString("DotNetCoreAngularDbContext"));
-        }
     }
 }

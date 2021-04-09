@@ -4,15 +4,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DotNetCoreAngular.Persistence
 {
-    public static class IServiceCollectionExtension
+    public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddPersistenceLibrary(this IServiceCollection services)
+        public static void AddPersistenceLibrary(this IServiceCollection services)
         {
             services.AddDbContext<DotNetCoreAngularDbContext>();
             services.AddTransient<IUserSettingsDataService, UserSettingsDataService>();
             services.AddTransient<IAccountDataService, AccountDataService>();
             services.AddTransient<IRegisterValidatorDataService, RegisterValidatorDataService>();
-            return services;
         }
     }
 }
