@@ -26,5 +26,5 @@ jobs:
     - name: Publish
       run: |
         iisreset /stop
-        Copy-Item ./dotnetcorewebapp/* "Default Web Site/DotNetCoreAngular.WebApi" -Recurse -Force
+        Copy-Item ./DotNetCoreAngular.Server/* "Default Web Site/DotNetCoreAngular.WebApi" -Recurse -Force
         iisreset /start
