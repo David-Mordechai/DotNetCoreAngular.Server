@@ -25,6 +25,4 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: |
-        iisreset /stop
         Copy-Item DotNetCoreAngular.WebApi\bin\Debug\netcoreapp3.1* "Default Web Site/DotNetCoreAngular.WebApi" -Recurse -Force
-        iisreset /start
