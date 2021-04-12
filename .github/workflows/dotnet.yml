@@ -24,4 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish .\DotNetCoreAngular.WebApi\DotNetCoreAngular.WebApi.csproj /p:PublishProfile=DotNetCoreAngular.WebApi\Properties\PublishProfiles\websrv.pubxml --no-restore
+      run:  |
+          iisreset /stop
+          dotnet publish .\DotNetCoreAngular.WebApi\DotNetCoreAngular.WebApi.csproj /p:PublishProfile=DotNetCoreAngular.WebApi\Properties\PublishProfiles\websrv.pubxml --no-restore
+          iisreset /start
