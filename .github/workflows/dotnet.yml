@@ -24,7 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run:  |
-          Invoke-Command -ScriptBlock { Stop-WebAppPool -Name "DotNetCoreAngular.WebApi.Pool" }
-          dotnet publish .\DotNetCoreAngular.WebApi\DotNetCoreAngular.WebApi.csproj /p:PublishProfile=DotNetCoreAngular.WebApi\Properties\PublishProfiles\websrv.pubxml --no-restore
-          Invoke-Command -ScriptBlock { Start-WebAppPool -Name "DotNetCoreAngular.WebApi.Pool" }
+      run:  dotnet publish .\DotNetCoreAngular.WebApi\DotNetCoreAngular.WebApi.csproj /p:PublishProfile=DotNetCoreAngular.WebApi\Properties\PublishProfiles\websrv.pubxml --no-restore
