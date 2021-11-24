@@ -88,13 +88,13 @@ namespace DotNetCoreAngular.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
+            
+            app.UseRouting();
+            
             app.UseCors("EnableCORS");
 
             app.UseAuthentication();
-
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
 
             app.UseAuthorization();
 
